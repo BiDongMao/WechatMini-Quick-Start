@@ -1,0 +1,8 @@
+/* pages/IndexTabPage/TabPageOne/tab-page-one.wxss */
+@import "/common.wxss"; /* 公共样式 */
+
+.page-oen-centent{
+  font-size: 36rpx;
+  background-color: #fff;
+  padding: 40rpx 0;
+}

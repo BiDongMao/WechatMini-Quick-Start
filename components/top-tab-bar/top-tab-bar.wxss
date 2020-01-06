@@ -1,0 +1,5 @@
+/* components/top-tab-bar/top-tab-bar.wxss */
+.top-tab-bar{
+  position: relative;
+  z-index: 9999;
+}

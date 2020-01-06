@@ -1,0 +1,7 @@
+{
+  "usingComponents": {
+    "tab-page-first": "/pages/IndexTabPage/TabPageFirst/tab-page-first",
+    "tab-page-second": "/pages/IndexTabPage/TabPageSecond/tab-page-second",
+    "tab-page-third": "/pages/IndexTabPage/TabPageThird/tab-page-third"
+  }
+}

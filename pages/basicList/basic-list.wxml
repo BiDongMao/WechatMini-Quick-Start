@@ -1,0 +1,20 @@
+<!--pages/basicList/basic-list.wxml-->
+
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="content">基础列表</view>
+</cu-custom>
+
+<!-- 列表 S -->
+<view class="list" style='height:{{BaseViewH}}px'>
+  <pulltorefresh-view nomore="{{nomore}}" refreshing="{{refreshing}}" nodata="{{nodata}}" bindpulldownrefresh="refreshData" bindloadmore="loadmoreData">
+    <!-- 正常 -->
+    <view 
+    class='list-item' 
+    wx:for="{{dataList}}" 
+    wx:key="id" 
+    >
+     {{index}}
+    </view>
+  </pulltorefresh-view>
+</view>
+<!-- 列表 E -->

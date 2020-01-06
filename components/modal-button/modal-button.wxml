@@ -1,0 +1,10 @@
+<!--components/modal-button/modal-button.wxml-->
+ <!-- btn s -->
+    <view class='bottom-btn-box' >
+      <!-- <view class='bottom-btn-box' > -->
+      <view class='bottom-btn-group'>
+        <view class='reset-btn bottom-btn' bindtap='resetChose'>重置</view>
+        <view class="confirm-btn bottom-btn" bindtap='confirmChose'>确定</view>
+      </view>
+    </view>
+    <!-- btn e -->

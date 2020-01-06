@@ -1,0 +1,12 @@
+  <picker 
+  mode="multiSelector"  
+  bindchange="bindMultiPickerChange" 
+  bindcolumnchange="bindMultiPickerColumnChange" 
+  value="{{multiIndex}}" 
+  range="{{multiList}}" 
+  range-key="name">
+    <view class="picker">
+      <text wx:if="{{pickerValue.names.length>0}}">{{pickerValue.names[0]}} {{pickerValue.names[1]}} {{pickerValue.names[2]}}</text>
+      <text wx:else>请选择</text>
+    </view>
+  </picker>

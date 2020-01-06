@@ -1,0 +1,27 @@
+<!--components/right-search-modal/tree-list/tree-list.wxml-->
+<view class="cu-list menu text-left">
+  <view class="list-title cu-item" wx:if="{{!isChild}}">{{listTitle}}</view>
+  <block wx:for="{{list}}" wx:key>
+    <view 
+    class="cu-item {{item.children&&item.children.length>0?'arrow':''}} {{item.open?'open':''}} {{activeId==item.id?'active':''}}" 
+    data-id="{{item.id}}"
+    data-index="{{index}}"
+    data-children="{{item.children}}"
+    catchtap='onTreeItemClick'>
+      <view class="content">
+        <view>{{item.name}}</view>
+      </view>
+    </view>
+    <!-- 子级s -->
+    <view class="sub-tree-item {{item.open?'active':''}}" wx:if="{{item.children&&item.children.length>0}}">
+      <tree-list 
+      childList="{{item.children}}" 
+      optionsType="{{optionsType}}" 
+      isChild="{{true}}" 
+      activeId="{{activeId}}" ></tree-list>
+    </view>
+    <!-- 子级e-->
+
+  </block>
+  
+</view>

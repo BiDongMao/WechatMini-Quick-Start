@@ -1,0 +1,13 @@
+/* pages/IndexTabPage/TabPageSecond/tab-page-second.wxss */
+.list{
+  /* position: fixed; */
+}
+.list-item{
+  padding: 20rpx 40rpx;
+  background-color: rgb(179, 189, 233);
+  text-align: center;
+  margin-bottom: 20rpx;
+  height: 300rpx;
+  line-height: 300rpx;
+  
+}

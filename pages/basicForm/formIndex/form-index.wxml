@@ -1,0 +1,99 @@
+<!--pages/basicForm/formIndex/form-index.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="content">基础表单</view>
+</cu-custom>
+
+<!-- 表单内容 S -->
+<form bindsubmit="onFormSubmit" >
+  <!-- 表单主体s -->
+  <view class="form-body" style='min-height:{{ BaseViewH-130*RpxToPx }}px'>
+    <!-- 样式一 s-->
+    <view class="cu-form-group">
+      <view class="title">姓名</view>
+      <input 
+      name="uname" 
+      value="{{ form.uname }}" 
+      class="weui-input" 
+      type="text"
+      bindblur="onInputBlur"
+      data-name="uname" 
+      placeholder="{{ Error.uname?Error.uname:'请输入姓名' }}" 
+      placeholder-class="{{ Error.uname?'err-style':'' }}"></input>
+    </view>
+
+    <view class="cu-form-group">
+      <view class="title">手机号</view>
+      <input 
+      name="mobile" 
+      value="{{ form.mobile }}" 
+      class="weui-input" 
+      type="text" 
+      bindblur="onInputBlur"
+      data-name="mobile"
+      placeholder="{{ Error.mobile?Error.mobile:'请输入手机号' }}" 
+      placeholder-class="{{ Error.mobile?'err-style':'' }}"></input>
+    </view>
+    <!-- 样式一 e-->
+    
+    <!-- 样式二 s -->
+    <view class="form-content">
+      <view class="cu-form-group ">
+        <view class="title">年龄</view>
+          <input 
+          name="age" 
+          value="{{ form.age }}" 
+          class="weui-input" 
+          type="number" 
+          placeholder='请输入年龄'
+          bindblur="onInputBlur"
+          data-name="age"
+          ></input>
+      </view>
+      <view class=" err-tips err-style">{{Error.age}}</view>
+    </view>
+
+    <view class="form-content">
+      <view class="cu-form-group ">
+        <view class="title">地区</view>
+         <area-tree-picker ids="{{form.area}}" style="width:100%;height:80rpx;" name="area" value="{{form.area}}"></area-tree-picker>
+      </view>
+      <view class=" err-tips err-style">{{Error.area}}</view>
+    </view>
+
+    <view class="form-content">
+      <view class="cu-form-group">
+        <view class="title">生日</view>
+        <picker name="birthday" mode="date" value="{{form.birthday}}" start="2015-09-01" end="2020-09-01" bindchange="onDateChange">
+          <view class="picker">
+            {{form.birthday?form.birthday:'请选择'}}
+          </view>
+        </picker>
+      </view>
+      <view class=" err-tips err-style">{{Error.birthday}}</view>
+    </view>
+
+    <view class="form-content" bindtap="jumpFormListPage">
+      <view class="cu-form-group ">
+        <view class="title">购买物品（{{form.materialList&&form.materialList.length>0?form.materialList.length:0}}件）</view>
+        <text class="cuIcon-right lg text-gray"></text>
+      </view>
+      <view class=" err-tips err-style">{{Error.materialList}}</view>
+    </view>
+
+    <!-- 样式二e -->
+   
+
+  </view>
+  <!-- 表单主体s -->
+
+ 
+  <!-- 按钮s -->
+  <view class="cu-bar btn-group margin-bottom">
+    <button class="cu-btn bg-grey shadow-blur round">取消</button>
+    <button class="cu-btn bg-blue shadow-blur round" form-type="submit">保存</button>
+  </view>
+  <!-- 按钮e-->
+
+</form>
+<!-- 表单内容 E -->
+

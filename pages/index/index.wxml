@@ -1,0 +1,28 @@
+<cu-custom bgColor="bg-gradual-blue">
+  <view slot="content">Quick-Start</view>
+</cu-custom>
+
+<!-- 首页 -->
+<blcok wx:if="{{activeIndex==0}}">
+  <tab-page-first></tab-page-first>
+</blcok>
+
+<!-- 首页列表 -->
+<blcok wx:if="{{activeIndex==1}}">
+  <tab-page-second></tab-page-second>
+</blcok>
+
+<!-- 列表 -->
+<blcok wx:if="{{activeIndex==3}}">
+  <tab-page-third></tab-page-third>
+</blcok>
+<!-- 
+<view>
+<view>点击时间在blur时间之前</view>
+  <input value="{{inputValue}}" bindblur="bindValueBlur" placeholder="请输入" focus="{{isFocus}}" bindtap="getFocus"></input>
+  <button bindtap="buttonClick">点击</button>
+</view> -->
+
+<tab-bar bind:listenIndex="getTabIndex"></tab-bar>
+
+

@@ -1,0 +1,18 @@
+/* pages/basicForm/formList/form-list.wxss */
+
+.form-title{
+  height: 90rpx;
+  line-height: 50rpx;
+  padding: 20rpx 30rpx;
+  box-sizing: border-box;
+}
+.bottom-tool{
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 38rpx;
+}
+.delete-box{
+  display: inline-block;
+  width: 100rpx;
+}

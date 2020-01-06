@@ -1,0 +1,27 @@
+/* components/modal-button/modal-button.wxss */
+
+.bottom-btn-box{
+  position: fixed;
+  bottom: 0rpx;
+  left: 0rpx;
+  width: 100%;
+}
+.bottom-btn-group{
+  display: flex;
+}
+.bottom-btn{
+  width: 50%;
+  box-sizing: border-box;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  border-top: 1rpx solid #ccc;
+}
+.reset-btn{
+  background-color: #fff;
+  color: #303030;
+}
+.confirm-btn{
+  background-color: #2397F3;
+  color: #fff;
+}

@@ -1,0 +1,4 @@
+<!--pages/IndexTabPage/TabPageOne/tab-page-one.wxml-->
+<view class="page-oen-centent tacenter">
+  小程序快速开始demo--基于colorUI
+</view>

@@ -1,0 +1,17 @@
+<!--components/right-search-modal/right-search-modal.wxml-->
+<!-- 右侧筛选列表 -->
+<view class="cu-modal drawer-modal justify-end {{showModal?'show':''}}" catchtap="hideModal">
+  <view 
+    class="cu-dialog basis-lg" 
+    catchtap 
+    style="top:{{CustomBar+100*RpxToPx}}px;height:calc(100vh - {{CustomBar+100*RpxToPx}}px)">
+    <scroll-view 
+      scroll-y="true"  
+      style="top:{{CustomBar+100*RpxToPx}}px;height:calc(100vh - {{CustomBar+100*RpxToPx}}px);padding-bottom:100rpx;">
+    
+      <slot name="tree-list"></slot>
+      <slot name="button"></slot>
+
+    </scroll-view>
+  </view>
+</view>

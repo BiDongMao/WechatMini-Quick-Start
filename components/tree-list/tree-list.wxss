@@ -1,0 +1,39 @@
+/* components/right-search-modal/tree-list/tree-list.wxss */
+.cu-list.menu>.cu-item.arrow.open:before {
+   transform: rotate(90deg);
+  -webkit-transition:.2s;
+  transition:.2s;
+}
+.cu-list.menu>.cu-item.arrow:before {
+  transform: rotate(0deg);
+  -webkit-transition:.2s;
+  transition:.2s;
+}
+.cu-list.menu>.cu-item.active{
+  background-color: rgb(205, 226, 240);
+}
+.sub-tree-item{
+  height: 0;
+  overflow: hidden;
+  opacity:0;
+  -webkit-transform:translateY(-20%);
+  transform:translateY(-20%);
+  -webkit-transition:.2s;
+  transition:.2s;
+  font-size: 24rpx;
+}
+.sub-tree-item.active{
+  height: auto;
+  opacity:1;
+  -webkit-transform:translateY(0);
+  transform:translateY(0);
+  -webkit-transition:.2s;
+  transition:.2s;
+}
+.sub-tree-item .cu-list.menu>.cu-item .content{
+  font-size: 24rpx;
+}
+.list-title.cu-item{
+  font-weight: bold;
+  font-size: 32rpx;
+}

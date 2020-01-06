@@ -1,0 +1,14 @@
+<!--components/top-tab-bar/top-tab-bar.wxml-->
+<scroll-view scroll-x class="bg-white nav top-tab-bar">
+  <view class="flex text-center">
+    <view 
+    class="cu-item flex-sub {{index==TabCur?'text-blue cur':''}}" 
+    wx:for="{{list}}" 
+    wx:key 
+    bindtap="tabSelect" 
+    id="{{item.id}}"
+    data-index="{{index}}">
+      {{item.name}}
+    </view>
+  </view>
+</scroll-view>

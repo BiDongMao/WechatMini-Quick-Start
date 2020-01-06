@@ -1,0 +1,50 @@
+<!--pages/IndexTabPage/TabPageSecond/tab-page-second.wxml-->
+
+<!-- search-bar -->
+<top-search-bar 
+pld="请输入关键字" 
+type="left-input" 
+bind:onInputBlur="searchList" 
+bind:onSideBtnClick="showModal"></top-search-bar>
+
+<!-- right-search-modal s-->
+<right-search-modal 
+showModal="{{isShowModal}}" 
+bind:onShowModal="showModal"
+type="{{1}}">
+
+  <tree-list slot="tree-list" 
+  id="userTree"
+  optionsType="userId" 
+  activeId="{{searchForm.userId}}" 
+  bind:watchId="getSearchFormData"></tree-list>
+
+  <tree-list 
+  id="materialTree"
+  slot="tree-list" 
+  optionsType="materialId" 
+  activeId="{{searchForm.materialId}}" 
+  bind:watchId="getSearchFormData"></tree-list>
+
+  <modal-button slot="button" bind:onResetClick="resetSearchForm" bind:onComfirmClick="comfirmForm"></modal-button>
+
+</right-search-modal>
+<!-- right-search-modal e-->
+
+<!-- 列表 S -->
+<view class="list" style='height:{{BaseViewH-100}}px'>
+  <pulltorefresh-view nomore="{{nomore}}" refreshing="{{refreshing}}" nodata="{{nodata}}" bindpulldownrefresh="refreshData" bindloadmore="loadmoreData">
+    <!-- 正常 -->
+    <view 
+    class='list-item' 
+    wx:for="{{dataList}}" 
+    wx:key="id" 
+    >
+     {{index}}
+    </view>
+  </pulltorefresh-view>
+</view>
+<!-- 列表 E -->
+
+
+

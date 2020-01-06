@@ -1,0 +1,42 @@
+<!--pages/IndexTabPage/TabPageThird/tab-page-third.wxml-->
+
+<view class="cu-list menu text-left solid-top">
+
+  <view class="cu-item arrow" catchtap="jumpToPage" data-index="{{0}}">
+    <view class="content">
+      <text class="cuIcon-circlefill text-blue"></text>
+      <text class="text-grey">基础列表</text>
+    </view>
+  </view>
+
+   <view class="cu-item arrow" catchtap="jumpToPage" data-index="{{1}}">
+    <view class="content">
+      <text class="cuIcon-emojiflashfill text-pink"></text>
+      <text class="text-grey">tabs列表</text>
+    </view>
+  </view>
+
+  <view class="cu-item arrow" catchtap="jumpToPage" data-index="{{2}}">
+    <view class="content">
+      <text class="cuIcon-btn text-orange"></text>
+      <text class="text-grey">基础表单添加</text>
+    </view>
+  </view>
+
+   <view class="cu-item arrow" catchtap="jumpToPage" data-index="{{2}}" data-id="{{1}}">
+    <view class="content">
+      <text class="cuIcon-btn text-orange"></text>
+      <text class="text-grey">基础表单修改</text>
+    </view>
+  </view>
+
+  <view class="cu-item arrow" catchtap="jumpToPage" data-index="{{3}}">
+    <view class="content">
+      <text class="cuIcon-clothesfill text-green"></text>
+      <text class="text-grey">基础详情</text>
+    </view>
+  </view>
+
+ 
+
+</view>

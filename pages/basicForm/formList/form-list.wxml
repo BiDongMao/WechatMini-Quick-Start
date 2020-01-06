@@ -1,0 +1,101 @@
+<!-- 过滤器 -->
+<wxs src="./formList.wxs" module="filter" />
+<!--pages/basicForm/formList/form-list.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="content">物品列表</view>
+</cu-custom>
+
+<!-- 表单内容 S -->
+<form bindsubmit="onFormSubmit" >
+   <view class="form-body" style='min-height:{{ BaseViewH-130*RpxToPx }}px'>
+      <view class="form-title flex-sb">
+        <view>物品列表</view>
+         <button class="cu-btn  bg-blue sm round shadow" bindtap="onAddClick">
+          <text class="cuIcon-roundadd"></text> 添加
+         </button>
+      </view>
+      <block wx:for="{{materialList}}" wx:key="id">
+        <view class="form-item">
+
+            <view class="form-content">
+              <view class="cu-form-group ">
+                <view class="title">物品名称</view>
+                  <input 
+                  type="text" 
+                  name="name" 
+                  value="{{ item.name }}" 
+                  class="weui-input" 
+                  placeholder='请输入物品名称'
+                  bindblur="onInputBlur"
+                  data-name="name"
+                  data-index="{{index}}"
+                  ></input>
+              </view>
+              <view class=" err-tips err-style">{{Error[index].name}}</view>
+            </view>
+
+            <view class="form-content">
+              <view class="cu-form-group ">
+                <view class="title">价格</view>
+                  <input 
+                  type="digit"
+                  name="price" 
+                  value="{{ item.price }}" 
+                  class="weui-input" 
+                  placeholder='请输入价格'
+                  bindblur="onInputBlur"
+                  data-name="price"
+                  data-index="{{index}}"
+                  ></input>
+              </view>
+              <view class=" err-tips err-style">{{Error[index].price}}</view>
+            </view>
+
+            <view class="form-content">
+              <view class="cu-form-group ">
+                <view class="title">数量</view>
+                  <input 
+                  type="digit"
+                  name="count" 
+                  value="{{ item.count }}" 
+                  class="weui-input" 
+                  placeholder='请输入数量'
+                  bindblur="onInputBlur"
+                  data-name="count"
+                  data-index="{{index}}"
+                  ></input>
+              </view>
+              <view class=" err-tips err-style">{{Error[index].count}}</view>
+            </view>
+
+             <view class="form-content">
+              <view class="cu-form-group ">
+                <view class="title">总价</view>
+                  <input 
+                  type="digit"
+                  name="totalPrice" 
+                  value="{{ item.totalPrice }}" 
+                  class="weui-input" 
+                  placeholder='请输入总价'
+                  bindblur="onInputBlur"
+                  data-name="totalPrice"
+                  data-index="{{index}}"
+                  ></input>
+              </view>
+              <view class=" err-tips err-style">{{Error[index].totalPrice}}</view>
+            </view>
+
+
+            <view class="bottom-tool">
+              <view class="delete-box" bindtap="onDeleteClick" data-index="{{index}}">
+                <text class="cuIcon-delete text-red"></text>
+              </view>
+              
+            </view>
+
+        </view>
+      </block>
+   </view>
+</form>
+<!-- 表单内容 E -->
+

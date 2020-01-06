@@ -1,0 +1,16 @@
+.arrow-icon{
+  width: 27rpx;
+  height: 16rpx;
+  float: right;
+  position: relative;
+  top: 16rpx;
+}
+.arrow-icon.right-arrow{
+  transform: rotate(270deg)
+}
+.picker{
+  width: 480rpx;
+  
+  text-align: right;
+  color: #919191;
+}

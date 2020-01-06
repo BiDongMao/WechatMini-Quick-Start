@@ -1,0 +1,18 @@
+
+<!-- 底部tab -->
+<view class="rz-tabbar cu-bar tabbar bg-white">
+
+  <block wx:for="{{tabList}}" wx:key="id">
+    <view 
+    class="action {{activeIndex==index?'text-green':'text-gray'}} {{item.isBtn?'add-action':''}}"
+    data-index="{{index}}"
+    bindtap="onTabClick">
+      <button wx:if="{{item.isBtn}}" class="cu-btn {{item.icon}} bg-green shadow"></button>
+      <view wx:else class="{{item.icon}}">
+        <view class="cu-tag badge" wx:if="{{item.tag}}">{{item.tagCount?item.tagCount:''}}</view>
+      </view>
+      {{item.title}}
+    </view>
+  </block>
+
+  </view>

@@ -1,0 +1,24 @@
+<view class="top-search-bar-content">
+  <view class="top-search-bar" >
+
+  <view class='search-bar-main {{type}}'>
+    <view class='search-bar-icon'>
+      <image src="/images/search_icon.png" class='search-icon'></image>
+    </view>
+    <view class='search-bar-input '>
+      <input placeholder="{{pld}}" bindblur='onInputBlur' value='{{searchKey}}' bindinput='onInputInput'></input>
+    </view>
+    <view class='search-bar-clear' wx:if="{{searchKey}}" bindtap='onClearClick'>
+      <image src="/images/clear_icon.png" class='clear-icon'></image>
+    </view>
+  </view>
+
+  <view class="search-bar-aside" wx:if="{{type=='left-input'}}" >
+    <image src="/images/filter_icon.png" class='filter-icon' bindtap='onSideBtnClick'></image>
+  </view>
+
+  </view>
+</view>
+
+
+

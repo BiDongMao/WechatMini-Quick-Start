@@ -1,0 +1,22 @@
+<!--pages/tabsList/tabs-list.wxml-->
+<cu-custom bgColor="bg-gradual-blue" isBack="{{true}}">
+  <view slot="content">tabs列表</view>
+</cu-custom>
+
+<!-- top-tab-bar -->
+<top-tab-bar list="{{tabList}}" TabCur="{{currentIndex}}" bind:watchIndex="getTabIndex"></top-tab-bar>
+
+<!-- 列表 S -->
+<view class="list" style='height:{{BaseViewH-90*RpxToPx}}px'>
+  <pulltorefresh-view nomore="{{nomore}}" refreshing="{{refreshing}}" nodata="{{nodata}}" bindpulldownrefresh="refreshData" bindloadmore="loadmoreData">
+    <!-- 正常 -->
+    <view 
+    class='list-item' 
+    wx:for="{{dataList}}" 
+    wx:key="id" 
+    >
+     {{index}}
+    </view>
+  </pulltorefresh-view>
+</view>
+<!-- 列表 E -->

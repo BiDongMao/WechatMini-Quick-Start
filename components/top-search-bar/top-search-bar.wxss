@@ -1,0 +1,62 @@
+/* components/top-search-bar/top-search-bar.wxss */
+/* 搜索条样式 */
+
+.top-search-bar-content{
+  height: 100rpx;
+  background-color: #2397F3;
+  width: 100%;
+  padding: 0 30rpx;
+  box-sizing: border-box;
+  line-height: 100rpx;
+  position: relative;
+  z-index: 9999;
+}
+.top-search-bar{
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.search-bar-main{
+  position: relative;
+  background-color: #fff;
+  border-radius: 29rpx;
+  width: 620rpx;
+  height: 64rpx;
+  line-height: 64rpx;
+  box-sizing: border-box;
+  padding: 0 72rpx;
+  margin-top: 10px;
+}
+.search-bar-main.full-input{
+  width: 100%;
+}
+.search-bar-input input{
+  height: 64rpx;
+  line-height: 64rpx;
+}
+.search-bar-clear{
+  position: absolute;
+  right: 20rpx;
+  top: 7rpx;
+} 
+.clear-icon{
+  width: 31rpx;
+  height: 31rpx;
+}
+.search-bar-icon{
+  position: absolute;
+  left: 28rpx;
+  top: 7rpx;
+}
+.search-icon{
+  width: 26rpx;
+  height: 26rpx;
+}
+.search-bar-aside{
+  margin-top: 10px;
+  margin-left: 12rpx;
+}
+.filter-icon{
+  width: 40rpx;
+  height: 50rpx;
+}
